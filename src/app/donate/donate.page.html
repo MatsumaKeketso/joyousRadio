@@ -1,0 +1,299 @@
+<ion-content [scrollEvents]="true" (ionScroll)="logScrolling($event)">
+  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 20">
+    <div class="navigation" [ngClass]="{'light': light, 'none': !light}">
+      <div class="logo">
+        <img src="../assets/img/JR-stroke.png" alt="" />
+      </div>
+      <div class="menu">
+        <ion-button (click)="activateMenu()" fill="clear" color="dark">
+          <ion-icon slot="start" name="menu"></ion-icon>
+          Menu
+        </ion-button>
+      </div>
+      <div class="links animate__animated animate__fadeInUp">
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('home')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
+            Home
+          </ion-button>
+        </div>
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('about')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
+            About
+          </ion-button>
+        </div>
+        <div class="linkHover donate">
+          <ion-button
+            (click)="onClick('donate')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
+            Donate
+          </ion-button>
+        </div>
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('church')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
+            Church
+          </ion-button>
+        </div>
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('gallery')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
+            Gallery
+          </ion-button>
+        </div>
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('contact')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
+            Contact Us
+          </ion-button>
+        </div>
+        <ion-button (click)="onClick('listen')" expand="full" shape="round">
+          Listen Live
+        </ion-button>
+      </div>
+      <div class="links2" [ngClass]="{'links2Active': menuActive}">
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('home')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
+            Home
+          </ion-button>
+        </div>
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('about')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
+            About
+          </ion-button>
+        </div>
+        <div class="linkHover donate">
+          <ion-button
+            (click)="onClick('donate')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
+            Donate
+          </ion-button>
+        </div>
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('church')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
+            Church
+          </ion-button>
+        </div>
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('gallery')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
+            Gallery
+          </ion-button>
+        </div>
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('contact')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
+            Contact Us
+          </ion-button>
+        </div>
+        <ion-button (click)="onClick('listen')" expand="full" shape="round">
+          Listen Live
+        </ion-button>
+      </div>
+    </div>
+  </div>
+  <div class="head">
+    <div class="text">
+      <h1>Donate</h1>
+      <p>Home > Donate</p>
+    </div>
+  </div>
+  <div class="img">
+    <img src="../../assets/img/ribbon.png" alt="" />
+  </div>
+  <div class="body">
+    <h2>Remain Faithful in Giving</h2>
+    <p>
+      Joyous Radio is a free internet christian radio broadcasting christian
+      devotionals, music and short messages 24/7. <br />
+      If you wish to contribute your short biblical message or your songs to
+      Joyous Radio. Please contact us at admin@joyousradio.co.za
+    </p>
+
+    <br />
+    <br />
+    <div class="donation">
+      <h2>Donate by Bank Transfer</h2>
+      <p>Please make the donation to:</p>
+      <div class="bankDetail">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        <p><span>Account Holder: </span>Joyous Radio</p>
+      </div>
+      <div class="bankDetail">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        <p><span>Bank Name: </span>First National Bank (FNB)</p>
+      </div>
+      <div class="bankDetail">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        <p><span>Account Number: </span>62872008216</p>
+      </div>
+      <div class="bankDetail">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        <p><span>Branch Code: </span>250 655</p>
+      </div>
+      <div class="bankDetail">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        <p><span>FNB SWIFT Code: </span>FIRNZAJJ</p>
+      </div>
+      <p><b>Please include the reference “DONATION”</b></p>
+    </div>
+    <p>
+      Faithful people find a way to remain faithful. In these challenging times
+      Christians need to find a way to remain faithful in their giving
+      responsibility to the Lord and their church in order that their church’s
+      mission would thrive and not suffer.
+    </p>
+  </div>
+  <div class="footer">
+    <!-- Image -->
+    <div class="JS">
+      <img style="width: 250px" src="../../assets/img/JR-light.png" alt="" />
+      <p style="width: 292px">
+        "Jesus Christ is the same yesterday, today and forever more."
+      </p>
+      <p style="font-size: 12px">Hebrews 13:8</p>
+      <div class="fabs">
+        <ion-fab-button
+          href="https://www.facebook.com/JoyousRadio/"
+          target="_blank"
+          color="dark"
+        >
+          <ion-icon color="primary" name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+        <div class="s"></div>
+        <ion-fab-button
+          href="https://twitter.com/JoyousRadio"
+          target="_blank"
+          color="dark"
+        >
+          <ion-icon color="primary" name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+      </div>
+    </div>
+    <!-- Quick Links -->
+    <div class="quickLinks">
+      <h2>Quick Links</h2>
+      <ion-item lines="none" (click)="onClick('home')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Home </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('about')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> About </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('donate')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Donate </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('church')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Church </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('gallery')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Gallery </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('contact')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Contact Us </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('listen')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Listen Live </ion-label>
+      </ion-item>
+    </div>
+    <!-- Contact Info -->
+    <div class="contactInfo">
+      <h2>Contact Info</h2>
+      <ion-item lines="none">
+        <ion-icon
+          name="call"
+          lines="none"
+          color="light"
+          slot="start"
+        ></ion-icon>
+        <ion-label> 087 943 8100 </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon
+          name="call"
+          lines="none"
+          color="light"
+          slot="start"
+        ></ion-icon>
+        <ion-label> 086 502 3213 </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon
+          name="send"
+          lines="none"
+          color="light"
+          slot="start"
+        ></ion-icon>
+        <ion-label> admin@joyousradio.co.za </ion-label>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>

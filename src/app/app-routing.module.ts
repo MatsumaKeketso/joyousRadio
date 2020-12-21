@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'donate',
+    loadChildren: () => import('./donate/donate.module').then( m => m.DonatePageModule)
+  },
+  {
+    path: 'church',
+    loadChildren: () => import('./church/church.module').then( m => m.ChurchPageModule)
+  },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./gallery/gallery.module').then( m => m.GalleryPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'listen',
+    loadChildren: () => import('./listen/listen.module').then( m => m.ListenPageModule)
+  },
 ];
 
 @NgModule({
