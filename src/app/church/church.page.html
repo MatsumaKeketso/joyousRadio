@@ -2,7 +2,7 @@
   <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 20;">
     <div class="navigation " [ngClass]="{'light': light, 'none': !light}">
       <div class="logo">
-        <img src="../assets/img/JR-stroke.png" alt="">
+        <img src="../assets/img/JR-stroke.png" routerLink="/home" alt="">
       </div>
       <div class="menu">
         <ion-button (click)="activateMenu()" fill="clear" color="dark">
@@ -42,7 +42,7 @@
             Contact Us
           </ion-button>
         </div>
-        <ion-button (click)="onClick('listen')" expand="full" shape="round">
+        <ion-button (click)="onClick('listen')" mode="ios" expand="full" shape="round" style="transform: translateY(-9px);">
           Listen Live
         </ion-button>
       </div>
@@ -77,7 +77,7 @@
             Contact Us
           </ion-button>
         </div>
-        <ion-button (click)="onClick('listen')"  expand="full" shape="round">
+        <ion-button (click)="onClick('listen')" mode="ios"  expand="full" shape="round">
           Listen Live
         </ion-button>
       </div>
@@ -85,7 +85,7 @@
   </div>
   <div class="head">
     <div class="text">
-      <h1><span>Joyous Radio</span> and Uafc - Hope to You</h1>
+      <h1><span>Joyous Radio</span> and UAFC HOPE to You</h1>
       <p>Home > Church</p>
     </div>
   </div>
@@ -97,13 +97,29 @@
       </p>
       <div class="line"></div>
     </div>
-    <h2><span>Joyous </span>Radio</h2>
-    <p>Joyous Radio is part of the UAFC–HOPE to You Church,which is a Non-Profit Organization, based in Dube Village.</p>
+    <h2><span>UAFC </span>HOPE to You</h2>
+    <p>Joyous Radio is part of the UAFC HOPE to You Church,which is a Non-Profit Organization, based in Soweto.</p>
       <div class="btn">
-        <ion-button href="http://uafcdube.org.za/about.html" target="_blank" expand="block" shape="round">
-          Goto UAFC - Hope to You Website
+        <ion-button href="http://uafcdube.org.za/about.html" target="_blank" mode="ios" expand="block" shape="round">
+          Go to UAFC HOPE to You Website
         </ion-button>
       </div>
+  </div>
+  <div class="bibleQuote">
+    <div class="innerContent">
+      <div class="innerImg">
+        <img src="../../assets/img/JR-light.png" alt="" />
+      </div>
+      <div class="quote">
+        <p class="title">2 Corinthians 9:7 (AMP)</p>
+        <p>
+          "Let each one give <i> [thoughtfully and with purpose]</i> just as he has
+          decided in his heart, not grudgingly or under compulsion, for God
+          loves a cheerful giver <i>[and delights in the one whose heart is in
+            his gift]</i>."
+        </p>
+      </div>
+    </div>
   </div>
   <div class="footer">
     <!-- Image -->

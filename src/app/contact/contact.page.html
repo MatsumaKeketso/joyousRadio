@@ -2,7 +2,7 @@
   <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 20">
     <div class="navigation" [ngClass]="{'light': light, 'none': !light}">
       <div class="logo">
-        <img src="../assets/img/JR-stroke.png" alt="" />
+        <img src="../assets/img/JR-stroke.png" routerLink="/home" alt="" />
       </div>
       <div class="menu">
         <ion-button (click)="activateMenu()" fill="clear" color="dark">
@@ -77,7 +77,13 @@
             Contact Us
           </ion-button>
         </div>
-        <ion-button (click)="onClick('listen')" expand="full" shape="round">
+        <ion-button
+          (click)="onClick('listen')"
+          mode="ios"
+          expand="full"
+          shape="round"
+          style="transform: translateY(-9px);"
+        >
           Listen Live
         </ion-button>
       </div>
@@ -148,7 +154,12 @@
             Contact Us
           </ion-button>
         </div>
-        <ion-button (click)="onClick('listen')" expand="full" shape="round">
+        <ion-button
+          (click)="onClick('listen')"
+          mode="ios"
+          expand="full"
+          shape="round"
+        >
           Listen Live
         </ion-button>
       </div>
@@ -201,31 +212,73 @@
     </div>
     <div class="form">
       <!-- action="https://formspree.io/f/mpzoozvj" method="POST" -->
-      <form [formGroup]="messageForm" (ngSubmit)="sendMessage(messageForm.value)">
+      <form
+        [formGroup]="messageForm"
+        (ngSubmit)="sendMessage(messageForm.value)"
+      >
         <ion-item>
           <ion-label color="dark" position="floating">Full Name</ion-label>
-          <ion-input formControlName="fullName" color="dark" type="text"></ion-input>
+          <ion-input
+            formControlName="fullName"
+            color="dark"
+            type="text"
+          ></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label color="dark" position="floating">Email</ion-label>
-          <ion-input formControlName="email" color="dark" type="email"></ion-input>
+          <ion-input
+            formControlName="email"
+            color="dark"
+            type="email"
+          ></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label color="dark" position="floating">Subject</ion-label>
-          <ion-input formControlName="subject" color="dark" type="text"></ion-input>
+          <ion-input
+            formControlName="subject"
+            color="dark"
+            type="text"
+          ></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label color="dark" position="floating">Message</ion-label>
-          <ion-textarea formControlName="message" rows="14" color="dark" type="text"></ion-textarea>
+          <ion-textarea
+            formControlName="message"
+            rows="14"
+            color="dark"
+            type="text"
+          ></ion-textarea>
         </ion-item>
 
-        <ion-button type="submit" [disabled]="!messageForm.valid" expand="block" shape="round">
+        <ion-button
+          type="submit"
+          [disabled]="!messageForm.valid"
+          mode="ios"
+          expand="block"
+          shape="round"
+        >
           Send Message
         </ion-button>
       </form>
+    </div>
+  </div>
+  <div class="bibleQuote">
+    <div class="innerContent">
+      <div class="innerImg">
+        <img src="../../assets/img/JR-light.png" alt="" />
+      </div>
+      <div class="quote">
+        <p class="title">2 Corinthians 9:7 (AMP)</p>
+        <p>
+          "Let each one give <i> [thoughtfully and with purpose]</i> just as he
+          has decided in his heart, not grudgingly or under compulsion, for God
+          loves a cheerful giver
+          <i>[and delights in the one whose heart is in his gift]</i>."
+        </p>
+      </div>
     </div>
   </div>
   <div class="footer">

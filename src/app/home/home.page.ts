@@ -1,17 +1,17 @@
-import { Component, NgZone, ViewChild } from '@angular/core';
-import { IonSlides, NavController } from '@ionic/angular';
-
+import { Component, NgZone, ViewChild } from "@angular/core";
+import { IonSlides, NavController } from "@ionic/angular";
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: "app-home",
+  templateUrl: "home.page.html",
+  styleUrls: ["home.page.scss"],
 })
 export class HomePage {
-  @ViewChild('slides', {static: false}) slides: IonSlides
+  @ViewChild("slides", { static: false }) slides: IonSlides;
   slideOpts = {
     loop: true,
-    speed: 2000,
+    speed: 1000,
     delay: 3000,
+    slidesPerView: 1,
     on: {
       beforeInit() {
         const swiper = this;
@@ -69,17 +69,26 @@ export class HomePage {
         }
       },
     }
-  }
+  };
   sliderTimer = 0;
-  constructor(public zone: NgZone, public navCtrl: NavController) {
-    setInterval(() => {
-      this.sliderTimer = this.sliderTimer + 1;
-      if (this.sliderTimer == 7) {
-        this.slides.slideNext();
-        this.sliderTimer = 0;
-      }
-    }, 1000)
+  constructor(public zone: NgZone, public navCtrl: NavController) {}
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.zone.run(() => {
+      setTimeout(() => {
+        // this.slides.startAutoplay();
+      }, 2000);
+      setInterval(() => {
+        this.sliderTimer = this.sliderTimer + 1;
+        if (this.sliderTimer == 7) {
+          this.slides.slideNext();
+          this.sliderTimer = 0;
+        }
+      }, 1000);
+    });
   }
+
   // Navigation
   light = false;
   menuActive = false;
@@ -90,10 +99,11 @@ export class HomePage {
     } else {
       this.light = false;
     }
-    
   }
   onClick(page) {
     this.zone.run(() => {
+      console.log('clicked');
+      
       this.menuActive = false;
       this.navCtrl.navigateForward(page);
     });
@@ -101,7 +111,7 @@ export class HomePage {
   activateMenu() {
     this.zone.run(() => {
       this.menuActive = !this.menuActive;
-    })
+    });
   }
   // End NAvigation
 }

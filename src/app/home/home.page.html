@@ -1,83 +1,169 @@
-<ion-content [scrollEvents]="true" (ionScroll)="logScrolling($event)">
-  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 20;">
-    <div class="navigation " [ngClass]="{'light': light, 'none': !light}">
+<ion-content
+  style="background: black !important"
+  [scrollEvents]="true"
+  (ionScroll)="logScrolling($event)"
+>
+  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 20">
+    <div class="navigation" [ngClass]="{'light': light, 'none': !light}">
       <div class="logo">
-        <img src="../assets/img/JR-stroke.png" alt="">
+        <img src="../assets/img/JR-stroke.png" alt="" />
       </div>
       <div class="menu">
         <ion-button (click)="activateMenu()" fill="clear" color="dark">
           <ion-icon slot="start" name="menu"></ion-icon>
           Menu
         </ion-button>
-    
       </div>
       <div class="links animate__animated animate__fadeInUp">
-        <div  class="linkHover home">
-          <ion-button (click)="onClick('home')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover home">
+          <ion-button
+            (click)="onClick('home')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             Home
           </ion-button>
         </div>
-        <div class=" linkHover">
-          <ion-button (click)="onClick('about')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('about')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             About
           </ion-button>
         </div>
-        <div  class=" linkHover">
-          <ion-button (click)="onClick('donate')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('donate')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             Donate
           </ion-button>
         </div>
-        <div  class=" linkHover">
-          <ion-button (click)="onClick('church')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('church')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             Church
           </ion-button>
         </div>
-        <div  class=" linkHover">
-          <ion-button (click)="onClick('gallery')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('gallery')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             Gallery
           </ion-button>
         </div>
-        <div class=" linkHover">
-          <ion-button (click)="onClick('contact')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('contact')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             Contact Us
           </ion-button>
         </div>
-        <ion-button (click)="onClick('listen')" expand="full" shape="round">
+        <ion-button
+          (click)="onClick('listen')"
+          mode="ios"
+          expand="full"
+          shape="round"
+          style="transform: translateY(-9px);"
+        >
           Listen Live
         </ion-button>
       </div>
       <div class="links2" [ngClass]="{'links2Active': menuActive}">
-        <div  class="linkHover home">
-          <ion-button (click)="onClick('home')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover home">
+          <ion-button
+            (click)="onClick('home')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             Home
           </ion-button>
         </div>
-        <div  class=" linkHover">
-          <ion-button (click)="onClick('about')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('about')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             About
           </ion-button>
         </div>
-        <div class=" linkHover">
-          <ion-button (click)="onClick('donate')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('donate')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             Donate
           </ion-button>
         </div>
-        <div class=" linkHover">
-          <ion-button (click)="onClick('church')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('church')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             Church
           </ion-button>
         </div>
-        <div  class=" linkHover">
-          <ion-button (click)="onClick('gallery')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('gallery')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             Gallery
           </ion-button>
         </div>
-        <div class=" linkHover">
-          <ion-button (click)="onClick('contact')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('contact')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             Contact Us
           </ion-button>
         </div>
-        <ion-button (click)="onClick('listen')"  expand="full" shape="round">
+        <ion-button
+          (click)="onClick('listen')"
+          mode="ios"
+          expand="full"
+          shape="round"
+        >
           Listen Live
         </ion-button>
       </div>
@@ -88,21 +174,20 @@
       <ion-slide>
         <div class="slide1Container">
           <div class="content">
-            <img src="../../assets/img/JR-light.png" alt="Joyous Radio" />
-            <h2>Listen to <span>Joyous Radio</span> From wherever you are.</h2>
+            <img
+              data-tilt
+              src="../../assets/img/JR-light.png"
+              alt="Joyous Radio"
+            />
+            <h2>
+              Listen to <span>Joyous Radio</span> <br />
+              From wherever you are.
+            </h2>
             <p>
               A leading Christian radio station with a mission to share the Good
               News of Jesus Christ.
             </p>
             <div style="width: 200px; margin: auto">
-              <ion-button
-                (click)="onClick('listen')"
-                expand="block"
-                fill="outline"
-                shape="round"
-              >
-                Listen Live
-              </ion-button>
             </div>
           </div>
         </div>
@@ -111,20 +196,25 @@
         <div class="slide2Container">
           <div class="content">
             <img src="../../assets/img/JR-light.png" alt="Joyous Radio" />
-            <h2>Stream Sermons and Songs of Worship from the most talented musicians.</h2>
-            <div style="width: 200px; margin: auto">
-              <ion-button
-                (click)="onClick('listen')"
-                expand="block"
-                fill="outline"
-                shape="round"
-              >
-                Listen Live
-              </ion-button>
-            </div>
+            <h2>
+              Stream Sermons and Songs of Worship from the most talented
+              musicians.
+            </h2>
+           
           </div>
         </div>
       </ion-slide>
     </ion-slides>
+  </div>
+  <div class="ll">
+    <ion-button
+      (click)="onClick('listen')"
+      expand="block"
+      fill="outline"
+      shape="round"
+      mode="ios"
+    >
+      Listen Live
+    </ion-button>
   </div>
 </ion-content>

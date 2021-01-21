@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ContactPageRoutingModule } from './contact-routing.module';
 
 import { ContactPage } from './contact.page';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 
 @NgModule({
   imports: [
@@ -16,6 +17,9 @@ import { ContactPage } from './contact.page';
     ContactPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [ContactPage]
+  declarations: [ContactPage],
+  providers: [
+    EmailComposer
+  ]
 })
 export class ContactPageModule {}

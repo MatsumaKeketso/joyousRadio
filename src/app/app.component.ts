@@ -1,9 +1,10 @@
-import { Component, NgZone } from "@angular/core";
+import { Component, NgZone, Inject } from "@angular/core";
 
-import { NavController, Platform } from "@ionic/angular";
+import { AlertController, NavController, Platform } from "@ionic/angular";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
-import { MainService } from "./services/main.service";
+import { HttpClient } from "@angular/common/http";
+import { LOCAL_STORAGE, StorageService } from "ngx-webstorage-service";
 
 @Component({
   selector: "app-root",
@@ -11,32 +12,32 @@ import { MainService } from "./services/main.service";
   styleUrls: ["app.component.scss"],
 })
 export class AppComponent {
-  activated = "home";
-  menuActive = false;
-  playingRadio = false;
+  SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"];
   constructor(
     private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar,
-    private zone: NgZone,
-    private navCtrl: NavController,
-    private mainService: MainService
+    private http: HttpClient,
+    @Inject(LOCAL_STORAGE) private storage: StorageService,
+    public alertCtrl: AlertController
   ) {
     this.initializeApp();
   }
 
   initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+    console.clear()
+    this.platform.ready().then(async () => {
+      this.http.get("../assets/credentials.json").subscribe((data: any) => {
+      });
     });
   }
-  receiveScroll(ev) {
-    navigator.serviceWorker.getRegistrations().then(function(registrations) {
-      for(let registration of registrations) {
-       registration.unregister()
-     } })
-    
+  sendTestEmail () {
+  //   sendmail({
+  //     from: 'no-reply@yourdomain.com',
+  //     to: 'test@qq.com, test@sohu.com, test@163.com ',
+  //     subject: 'test sendmail',
+  //     html: 'Mail of test sendmail ',
+  //   }, function(err, reply) {
+  //     console.log(err && err.stack);
+  //     console.dir(reply);
+  // });
   }
-
 }

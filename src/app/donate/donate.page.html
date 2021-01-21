@@ -2,7 +2,7 @@
   <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 20">
     <div class="navigation" [ngClass]="{'light': light, 'none': !light}">
       <div class="logo">
-        <img src="../assets/img/JR-stroke.png" alt="" />
+        <img src="../assets/img/JR-stroke.png" routerLink="/home" alt="" />
       </div>
       <div class="menu">
         <ion-button (click)="activateMenu()" fill="clear" color="dark">
@@ -77,7 +77,13 @@
             Contact Us
           </ion-button>
         </div>
-        <ion-button (click)="onClick('listen')" expand="full" shape="round">
+        <ion-button
+          (click)="onClick('listen')"
+          mode="ios"
+          expand="full"
+          shape="round"
+          style="transform: translateY(-9px);"
+        >
           Listen Live
         </ion-button>
       </div>
@@ -148,7 +154,12 @@
             Contact Us
           </ion-button>
         </div>
-        <ion-button (click)="onClick('listen')" expand="full" shape="round">
+        <ion-button
+          (click)="onClick('listen')"
+          mode="ios"
+          expand="full"
+          shape="round"
+        >
           Listen Live
         </ion-button>
       </div>
@@ -156,7 +167,7 @@
   </div>
   <div class="head">
     <div class="text">
-      <h1>Donate</h1>
+      <!-- <h1>Donate</h1> -->
       <p>Home > Donate</p>
     </div>
   </div>
@@ -164,12 +175,14 @@
     <img src="../../assets/img/ribbon.png" alt="" />
   </div>
   <div class="body">
-    <h2>Remain Faithful in Giving</h2>
+    <h2><span>Joyous</span> Radio</h2>
     <p>
-      Joyous Radio is a free internet christian radio broadcasting christian
-      devotionals, music and short messages 24/7. <br />
-      If you wish to contribute your short biblical message or your songs to
-      Joyous Radio. Please contact us at admin@joyousradio.co.za
+      Joyous Radio is donor driven and we welcome your financial support. This
+      station exists because of the support of the public. We acknowledge and
+      appreciate all our partners in all forms. <br />
+      We need your support through donations so that we can continue the wonder
+      and surprise in the music and local-interest programming that is
+      refreshing, engaging, and helps expand perspectives.
     </p>
 
     <br />
@@ -205,6 +218,22 @@
       responsibility to the Lord and their church in order that their church’s
       mission would thrive and not suffer.
     </p>
+  </div>
+  <div class="bibleQuote">
+    <div class="innerContent">
+      <div class="innerImg">
+        <img src="../../assets/img/JR-light.png" alt="" />
+      </div>
+      <div class="quote">
+        <p class="title">2 Corinthians 9:7 (AMP)</p>
+        <p>
+          "Let each one give <i> [thoughtfully and with purpose]</i> just as he
+          has decided in his heart, not grudgingly or under compulsion, for God
+          loves a cheerful giver
+          <i>[and delights in the one whose heart is in his gift]</i>."
+        </p>
+      </div>
+    </div>
   </div>
   <div class="footer">
     <!-- Image -->

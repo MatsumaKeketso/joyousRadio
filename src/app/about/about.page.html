@@ -1,208 +1,348 @@
 <ion-content [scrollEvents]="true" (ionScroll)="logScrolling($event)">
-  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 20;">
-    <div class="navigation " [ngClass]="{'light': light, 'none': !light}">
+  <div style="position: fixed; top: 0; left: 0; right: 0; z-index: 20">
+    <div class="navigation" [ngClass]="{'light': light, 'none': !light}">
       <div class="logo">
-        <img src="../assets/img/JR-stroke.png" alt="">
+        <img src="../assets/img/JR-stroke.png" routerLink="/home" alt="" />
       </div>
       <div class="menu">
         <ion-button (click)="activateMenu()" fill="clear" color="dark">
           <ion-icon slot="start" name="menu"></ion-icon>
           Menu
         </ion-button>
-    
       </div>
       <div class="links animate__animated animate__fadeInUp">
-        <div  class="linkHover">
-          <ion-button (click)="onClick('home')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('home')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             Home
           </ion-button>
         </div>
-        <div class=" linkHover about">
-          <ion-button (click)="onClick('about')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover about">
+          <ion-button
+            (click)="onClick('about')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             About
           </ion-button>
         </div>
-        <div  class=" linkHover">
-          <ion-button (click)="onClick('donate')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('donate')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             Donate
           </ion-button>
         </div>
-        <div  class=" linkHover">
-          <ion-button (click)="onClick('church')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('church')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             Church
           </ion-button>
         </div>
-        <div  class=" linkHover">
-          <ion-button (click)="onClick('gallery')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('gallery')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             Gallery
           </ion-button>
         </div>
-        <div class=" linkHover">
-          <ion-button (click)="onClick('contact')" size="small" expand="full" color="{{light? 'dark': 'light'}}" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('contact')"
+            size="small"
+            expand="full"
+            color="{{light? 'dark': 'light'}}"
+            fill="clear"
+          >
             Contact Us
           </ion-button>
         </div>
-        <ion-button (click)="onClick('listen')" expand="full" shape="round">
+        <ion-button
+          (click)="onClick('listen')"
+          mode="ios"
+          expand="full"
+          shape="round"
+          style="transform: translateY(-9px);"
+        >
           Listen Live
         </ion-button>
       </div>
       <div class="links2" [ngClass]="{'links2Active': menuActive}">
-        <div  class="linkHover">
-          <ion-button (click)="onClick('home')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('home')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             Home
           </ion-button>
         </div>
-        <div  class=" linkHover about">
-          <ion-button (click)="onClick('about')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover about">
+          <ion-button
+            (click)="onClick('about')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             About
           </ion-button>
         </div>
-        <div class=" linkHover">
-          <ion-button (click)="onClick('donate')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('donate')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             Donate
           </ion-button>
         </div>
-        <div class=" linkHover">
-          <ion-button (click)="onClick('church')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('church')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             Church
           </ion-button>
         </div>
-        <div  class=" linkHover">
-          <ion-button (click)="onClick('gallery')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('gallery')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             Gallery
           </ion-button>
         </div>
-        <div class=" linkHover">
-          <ion-button (click)="onClick('contact')" size="small" expand="full" color="dark" fill="clear" >
+        <div class="linkHover">
+          <ion-button
+            (click)="onClick('contact')"
+            size="small"
+            expand="full"
+            color="dark"
+            fill="clear"
+          >
             Contact Us
           </ion-button>
         </div>
-        <ion-button (click)="onClick('listen')"  expand="full" shape="round">
+        <ion-button
+          (click)="onClick('listen')"
+          mode="ios"
+          expand="full"
+          shape="round"
+        >
           Listen Live
         </ion-button>
       </div>
     </div>
   </div>
-<div class="head">
-  <div class="text">
-    <h1>Connect</h1>
-    <p>Home > Connect</p>
+  <div class="head">
+    <div class="text">
+      <h1> <span>Joyous</span> Radio</h1>
+      <p>Home > Joyous Radio</p>
+    </div>
   </div>
-</div>
-<div class="body">
-  <div class="subHeader">
-    <div class="line"></div>
-    <p>Our</p>
-    <div class="line"></div>
-  </div>
-  <h2><span>Joyous </span>Radio</h2>
-  <p>Joyous Radio is a free internet christian radio broadcasting christian devotionals, music and short messages 24/7. <br> If you wish to contribute your short biblical message or your songs to Joyous Radio. Please contact us at admin@joyousradio.co.za</p>
-  <div class="media">
-    <ion-card>
-      <img src="https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/67514240_1155568961320245_3621583764779433984_n.jpg?_nc_cat=109&ccb=2&_nc_sid=8bfeb9&_nc_eui2=AeFzaGZIQQEa-thg92nvAiikuM67par3Mq24zrulqvcyrUcQqK68ryKILpejRsS0lQfCp44rSuiTndaKD_l3hrRt&_nc_ohc=GS2PbQFxNC0AX-GgnYE&_nc_ht=scontent-jnb1-1.xx&oh=33879549029ea7d899778262d604308e&oe=6004D65E" alt="">
-      </ion-card>
-      <ion-card>
-        <img src="https://scontent-jnb1-1.xx.fbcdn.net/v/t1.0-9/10269468_437890179754797_8565296699060286314_n.jpg?_nc_cat=102&ccb=2&_nc_sid=174925&_nc_eui2=AeF8Rr6MAyleNZ_giNtw5euO5bpHxxdUExXlukfHF1QTFcAX2VCPP861leplCveIyfUwvchIRNES2FLPQX10se3o&_nc_ohc=izVLysC7TUsAX_Bjq6S&_nc_ht=scontent-jnb1-1.xx&oh=c7aad11c87b15bc9cd0d9cab45930032&oe=6003652D" alt="">
-        </ion-card>
+  <div class="body">
+    <div class="subHeader">
+      <div class="line"></div>
+      <p>about</p>
+      <div class="line"></div>
+    </div>
+    <h2><span>Joyous </span>Radio</h2>
+    <br />
+    <br />
+    <br />
+    <div class="content">
+      <div class="information">
+        <div class="img">
+          <img src="../../assets/img/gallery/image002.jpg" alt="" />
+        </div>
+        <br />
+        <p>
+          Pastor <b>Sipho Mahlangu</b> and his wife, <b>Nthabiseng</b> took
+          Christ literally when He said in Mark 16:15, "Go into all the world
+          and preach the gospel to all creation". They both are READY to spread
+          the word of God, heal the sick by the Power of the Holy Spirit, help
+          and encourage others.
+        </p>
+        <p>
+          Their mission is Godbirthed passion to bring people into a saving
+          relationship with Jesus Christ. Pastor Sipho Mahlangu has been
+          evangelizing on the Radio since 2010. His aim in life is to bring
+          glory to his Lord and Savior Jesus Christ by being a faithful witness
+          of him JouousRadio airs Pastor Mahlangu's devotional messages everyday
+          names "Start Your New Day".
+        </p>
+        <div class="img">
+          <img src="../../assets/img/gallery/h.jpg" alt="" />
+        </div>
+        <p style="text-align: center">
+          <span>
+            The Christian internet radio that restores our hearts and comfort
+            our souls</span
+          >
+        </p>
+      </div>
+      <div class="parties">
+        <h2>Founding Members:</h2>
+        <div class="item">
+          <div class="img">
+            <img src="../../assets/img/gallery/pastor.jpg" alt="" />
+          </div>
+          <div class="title">
+            <p>PR SS Mahlangu</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="img">
+            <img src="../../assets/img/gallery/wife.jpg" alt="" />
+          </div>
+          <div class="title">
+            <p>PR N Mahlangu</p>
+          </div>
+        </div>
+        <h2>Our Mission</h2>
+        <p style="margin: 0px; text-align: left">
+          To create compelling media that inspires and encourages you to have a
+          meaningful relationship with Christ.
+        </p>
+      </div>
+    </div>
 
   </div>
-  <br>
-  <br>
-  <div class="subHeader">
-    <div class="line"></div>
-    <p>Presents</p>
-    <div class="line"></div>
+  <div class="bibleQuote">
+    <div class="innerContent">
+      <div class="innerImg">
+        <img src="../../assets/img/JR-light.png" alt="" />
+      </div>
+      <div class="quote">
+        <p class="title">2 Corinthians 9:7 (AMP)</p>
+        <p>
+          "Let each one give <i> [thoughtfully and with purpose]</i> just as he has
+          decided in his heart, not grudgingly or under compulsion, for God
+          loves a cheerful giver <i>[and delights in the one whose heart is in
+            his gift]</i>."
+        </p>
+      </div>
+    </div>
   </div>
-  <h2>Founders of <span>Joyous</span> Radio</h2>
-  <p>Pastor Sipho Mahlangu and his wife, Nthabiseng took Christ literally when He said in Mark 16:15, "Go into all the world and preach the gospel to all creation". They both are READY to spread the word of God, heal the sick by the Power of the Holy Spirit, help and encourage others.</p>
-  <p>Their mission is Godbirthed passion to bring people into a saving relationship with Jesus Christ. Pastor Sipho Mahlangu has been evangelizing on the Radio since 2010. His aim in life is to bring glory to his Lord and Savior Jesus Christ by being a faithful witness of him JouousRadio airs Pastor Mahlangu's devotional messages everyday names "Start Your New Day".</p>
-  <div class="founders">
-    <img src="../../assets/img/pastor_wife.png" alt=""/>
+  <div class="footer">
+    <!-- Image -->
+    <div class="JS">
+      <img style="width: 250px" src="../../assets/img/JR-light.png" alt="" />
+      <p style="width: 292px">
+        "Jesus Christ is the same yesterday, today and forever more."
+      </p>
+      <p style="font-size: 12px">Hebrews 13:8</p>
+      <div class="fabs">
+        <ion-fab-button
+          href="https://www.facebook.com/JoyousRadio/"
+          target="_blank"
+          color="dark"
+        >
+          <ion-icon color="primary" name="logo-facebook"></ion-icon>
+        </ion-fab-button>
+        <div class="s"></div>
+        <ion-fab-button
+          href="https://twitter.com/JoyousRadio"
+          target="_blank"
+          color="dark"
+        >
+          <ion-icon color="primary" name="logo-twitter"></ion-icon>
+        </ion-fab-button>
+      </div>
+    </div>
+    <!-- Quick Links -->
+    <div class="quickLinks">
+      <h2>Quick Links</h2>
+      <ion-item lines="none" (click)="onClick('home')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Home </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('about')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> About </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('donate')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Donate </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('church')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Church </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('gallery')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Gallery </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('contact')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Contact Us </ion-label>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick('listen')">
+        <ion-icon name="chevron-forward" color="light"></ion-icon>
+        <ion-label> Listen Live </ion-label>
+      </ion-item>
+    </div>
+    <!-- Contact Info -->
+    <div class="contactInfo">
+      <h2>Contact Info</h2>
+      <ion-item lines="none">
+        <ion-icon
+          name="call"
+          lines="none"
+          color="light"
+          slot="start"
+        ></ion-icon>
+        <ion-label> 087 943 8100 </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon
+          name="call"
+          lines="none"
+          color="light"
+          slot="start"
+        ></ion-icon>
+        <ion-label> 086 502 3213 </ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-icon
+          name="send"
+          lines="none"
+          color="light"
+          slot="start"
+        ></ion-icon>
+        <ion-label> admin@joyousradio.co.za </ion-label>
+      </ion-item>
+    </div>
   </div>
-</div>
-<div class="footer">
-  <!-- Image -->
-  <div class="JS">
-    <img style="width: 250px;" src="../../assets/img/JR-light.png" alt="">
-   <p style="width: 292px;"> "Jesus Christ is the same yesterday, today and forever more." </p>
-   <p style="font-size: 12px;">Hebrews 13:8</p>
-<div class="fabs">
-  <ion-fab-button href="https://www.facebook.com/JoyousRadio/" target="_blank" color="dark">
-    <ion-icon color="primary" name="logo-facebook"></ion-icon>
-  </ion-fab-button>
-  <div class="s"></div>
-  <ion-fab-button href="https://twitter.com/JoyousRadio" target="_blank" color="dark">
-   <ion-icon color="primary" name="logo-twitter"></ion-icon>
- </ion-fab-button>
-</div>
-  </div>
-  <!-- Quick Links -->
-  <div class="quickLinks">
-    <h2>Quick Links</h2>
-    <ion-item lines="none" (click)="onClick('home')">
-      <ion-icon name="chevron-forward" color="light"></ion-icon>
-      <ion-label>
-        Home
-      </ion-label>
-    </ion-item>
-    <ion-item lines="none" (click)="onClick('about')">
-      <ion-icon name="chevron-forward" color="light"></ion-icon>
-      <ion-label>
-        About
-      </ion-label>
-    </ion-item>
-    <ion-item lines="none" (click)="onClick('donate')">
-      <ion-icon name="chevron-forward" color="light"></ion-icon>
-      <ion-label>
-        Donate
-      </ion-label>
-    </ion-item>
-    <ion-item lines="none" (click)="onClick('church')">
-      <ion-icon name="chevron-forward" color="light"></ion-icon>
-      <ion-label>
-        Church
-      </ion-label>
-    </ion-item>
-    <ion-item lines="none" (click)="onClick('gallery')">
-      <ion-icon name="chevron-forward" color="light"></ion-icon>
-      <ion-label>
-        Gallery
-      </ion-label>
-    </ion-item>
-    <ion-item lines="none" (click)="onClick('contact')">
-      <ion-icon name="chevron-forward" color="light"></ion-icon>
-      <ion-label>
-        Contact Us
-      </ion-label>
-    </ion-item>
-    <ion-item lines="none" (click)="onClick('listen')">
-      <ion-icon name="chevron-forward" color="light"></ion-icon>
-      <ion-label>
-        Listen Live
-      </ion-label>
-    </ion-item>
-  </div>
-  <!-- Contact Info -->
-  <div class="contactInfo">
-    <h2>Contact Info</h2>
-    <ion-item lines="none">
-      <ion-icon name="call" lines="none" color="light" slot="start"></ion-icon>
-      <ion-label>
-        087 943 8100
-      </ion-label>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-icon name="call" lines="none" color="light" slot="start"></ion-icon>
-      <ion-label>
-        086 502 3213
-      </ion-label>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-icon name="send" lines="none" color="light" slot="start"></ion-icon>
-      <ion-label>
-        admin@joyousradio.co.za
-      </ion-label>
-    </ion-item>
-  </div>
-</div>
 </ion-content>

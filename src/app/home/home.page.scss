@@ -4,6 +4,13 @@
   transition: 0.3s ease-in;
   box-shadow: 0px 0px 9px #1717171c;
 }
+.ll {
+  position: absolute;
+  bottom: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+}
 .none {
   background: rgba(255, 255, 255, 0);
   transition: 0.3s ease-in;
@@ -18,8 +25,9 @@
   position: relative;
   .logo {
     flex-basis: 100%;
+    opacity: 0;
     img {
-      width: 150px;
+      height: 50px;
     }
   }
   .links2 {
@@ -31,6 +39,7 @@
     height: 0px;
     overflow: hidden;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
     .home,
     .about,
     .donate,
@@ -43,16 +52,16 @@
       display: block;
       content: "";
       border-bottom: solid 2px #ffd615;
-      transform: scaleX(0) translateY(7px);
+      transform: scaleX(0) translateY(15px);
       transition: transform 250ms ease-in-out;
     }
     .linkHover:hover:after {
-      transform: scaleX(1) translateY(7px);
+      transform: scaleX(1) translateY(15px);
     }
   }
   .links2Active {
     overflow: hidden;
-    height: 273px !important;
+    height: 281px !important;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   .links {
@@ -73,11 +82,11 @@
       display: block;
       content: "";
       border-bottom: solid 2px #ffd615;
-      transform: scaleX(0) translateY(7px);
+      transform: scaleX(0) translateY(15px);
       transition: transform 250ms ease-in-out;
     }
     .linkHover:hover:after {
-      transform: scaleX(1) translateY(7px);
+      transform: scaleX(1) translateY(15px);
     }
   }
   .menu {
@@ -90,7 +99,7 @@
     }
     .logo {
       img {
-        width: 100px;
+        width: 50px;
       }
     }
     .menu {
@@ -121,19 +130,31 @@
     align-items: center;
     justify-content: center;
     .content {
-      max-width: 30%;
+      max-width: 40%;
       color: white;
       img {
         width: 300px;
       }
+
       h2 {
         text-transform: uppercase;
         letter-spacing: 5px;
+        
       }
     }
     @media only screen and (max-width: 1347px) {
       .content{ 
         max-width: 90%;
+        transform: translateY(10%);
+         img {
+           width: 200px;
+         }
+         h2 {
+          font-size: 16px;
+         }
+         p {
+           font-size: 12px;
+         }
       }
     }
   }
@@ -159,6 +180,16 @@
     @media only screen and (max-width: 1347px) {
       .content{ 
         max-width: 90%;
+        transform: translateY(10%);
+         img {
+           width: 200px;
+         }
+         h2 {
+          font-size: 16px;
+         }
+         p {
+           font-size: 12px;
+         }
       }
     }
   }

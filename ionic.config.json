@@ -1,5 +1,7 @@
 {
   "name": "joyousRadio",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

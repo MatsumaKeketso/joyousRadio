@@ -2,7 +2,7 @@ import { Component, OnInit, NgZone } from "@angular/core";
 import { NavController } from "@ionic/angular";
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import { ToastController } from "@ionic/angular";
-import { MainService } from "../services/main.service";
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 @Component({
   selector: "app-contact",
   templateUrl: "./contact.page.html",
@@ -10,15 +10,17 @@ import { MainService } from "../services/main.service";
 })
 export class ContactPage implements OnInit {
   messageForm: FormGroup;
+
   constructor(
     public formBuilder: FormBuilder,
     private navCtrl: NavController,
     private zone: NgZone,
     public toastCtrl: ToastController,
-    private mainService: MainService
+    private emailComposer: EmailComposer
   ) {}
 
   ngOnInit() {
+ 
     this.messageForm = this.formBuilder.group({
       fullName: ["", Validators.compose([Validators.required])],
       email: [
@@ -59,21 +61,14 @@ export class ContactPage implements OnInit {
   // End NAvigation
 
   sendMessage(data) {
-    console.log(data)
-    let method = 'POST'
-    let url ='https://formspree.io/f/mpzoozvj'
-    let xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        console.log('Success > ', xhr.response, xhr.responseType);
-      } else {
-        console.log( 'Error > ', xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    this.mainService.sendEmail()
-    // xhr.send(data);
+    let email = {
+      to: 'keketsomatsuma88@gmail.com',
+      subject: 'Cordova Icons',
+      body: 'How are you? Nice greetings from Leipzig',
+      isHtml: true
+    }
+  
+    // Send a text message using default options
+    this.emailComposer.open(email);
   }
 }

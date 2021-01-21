@@ -1,8 +1,8 @@
 {
-  "name": "app",
-  "short_name": "app",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Joyous Radio",
+  "short_name": "joyousRadio",
+  "theme_color": "#ffd615",
+  "background_color": "#fff",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

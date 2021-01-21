@@ -43,16 +43,16 @@
       display: block;
       content: "";
       border-bottom: solid 2px #ffd615;
-      transform: scaleX(0) translateY(7px);
+      transform: scaleX(0) translateY(15px);
       transition: transform 250ms ease-in-out;
     }
     .linkHover:hover:after {
-      transform: scaleX(1) translateY(7px);
+      transform: scaleX(1) translateY(15px);
     }
   }
   .links2Active {
     overflow: hidden;
-    height: 273px !important;
+    height: 281px !important;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   .links {
@@ -73,11 +73,11 @@
       display: block;
       content: "";
       border-bottom: solid 2px #ffd615;
-      transform: scaleX(0) translateY(7px);
+      transform: scaleX(0) translateY(15px);
       transition: transform 250ms ease-in-out;
     }
     .linkHover:hover:after {
-      transform: scaleX(1) translateY(7px);
+      transform: scaleX(1) translateY(15px);
     }
   }
   .menu {
@@ -91,6 +91,7 @@
     .logo {
       img {
         width: 100px;
+        outline: none !important;
       }
     }
     .menu {
@@ -139,7 +140,7 @@
   @media only screen and (max-width: 1347px) {
     .text {
       h1 {
-        font-size: 50px;
+        font-size: 30px;
       }
     }
   }
@@ -176,10 +177,11 @@
   }
   h2 {
     font-size: 40px;
+    color: black;
   }
   p {
     margin: 20px;
-    color: #999999;
+    color: #000000;
     line-height: 30px;
   }
   .media {

@@ -43,7 +43,7 @@
       display: block;
       content: "";
       border-bottom: solid 2px #ffd615;
-      transform: scaleX(0) translateY(7px);
+      transform: scaleX(0) translateY(15px);
       transition: transform 250ms ease-in-out;
     }
     .linkHover:hover:after {
@@ -52,7 +52,7 @@
   }
   .links2Active {
     overflow: hidden;
-    height: 273px !important;
+    height: 281px !important;
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
   .links {
@@ -73,11 +73,11 @@
       display: block;
       content: "";
       border-bottom: solid 2px #ffd415;
-      transform: scaleX(0) translateY(7px);
+      transform: scaleX(0) translateY(15px);
       transition: transform 250ms ease-in-out;
     }
     .linkHover:hover:after {
-      transform: scaleX(1) translateY(7px);
+      transform: scaleX(1) translateY(15px);
     }
   }
   .menu {
@@ -110,7 +110,7 @@
 // End Navigation
 .head {
   background: linear-gradient(#17171741, #17171741),
-    url("https://images.unsplash.com/photo-1599924645572-f944c7f18c4f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    url("../../assets/img/onlineGiving.jpg");
 }
 .head {
   width: 100%;
@@ -142,6 +142,7 @@
   top: 70vh;
   left: 0vw;
   width: 200px;
+  z-index: 20;
 }
 
 .body {
@@ -152,7 +153,7 @@
   position: relative;
 
   .donation {
-    max-width: 400px;
+    max-width: 70%;
     margin: auto;
     h2 {
       font-size: 24px;
@@ -161,9 +162,10 @@
     .bankDetail {
       display: flex;
       align-items: center;
-      margin-left: 60px;
+      margin-left: 250px;
+      text-align: center;
       p {
-        font-size: 16px;
+        font-size: 20px;
         color: black;
         margin: 3px 20px;
         font-weight: 900;
@@ -175,7 +177,7 @@
   }
   p {
     margin: 20px;
-    color: #999999;
+    color: #000000;
     line-height: 30px;
   }
   .media {
@@ -193,6 +195,16 @@
     }
   }
   @media only screen and (max-width: 1347px) {
+    .donation {
+      max-width: 90%;
+      .bankDetail {
+        margin-left:  0px;
+
+        p {
+          font-size: 16px;;
+        }
+      }
+    }
     .media {
       width: 100%;
       display: flex;
