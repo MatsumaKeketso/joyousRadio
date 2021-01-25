@@ -3,8 +3,6 @@ import { Component, OnInit, NgZone } from "@angular/core";
 import { NavController } from "@ionic/angular";
 import { FormBuilder, Validators, FormGroup, NgForm } from "@angular/forms";
 import { ToastController } from "@ionic/angular";
-import { EmailComposer } from "@ionic-native/email-composer/ngx";
-import nodemailer from "nodemailer";
 @Component({
   selector: "app-contact",
   templateUrl: "./contact.page.html",
@@ -18,7 +16,6 @@ export class ContactPage implements OnInit {
     private navCtrl: NavController,
     private zone: NgZone,
     public toastCtrl: ToastController,
-    private emailComposer: EmailComposer,
     private http: HttpClient
   ) {}
 
@@ -72,7 +69,7 @@ export class ContactPage implements OnInit {
         const headers = new HttpHeaders({ "Content-Type": "application/json" });
         this.http
           .post(
-            "https://formspree.io/f/mpzoozvj",
+            "https://formspree.io/f/xeqpnvll",
             {
               name: email.fullName,
               replyto: email.email,
@@ -98,6 +95,9 @@ export class ContactPage implements OnInit {
               await toaster.present();
               this.loading = false;
             }
+          }, (err) => {
+            this.loading = false;
+            console.log(err);
           });
     });
   }

@@ -203,6 +203,15 @@
         }
       }
     }
+    .listen {
+      display: flex;
+      align-items: center;
+      margin: auto;
+      width: 230px;
+      p {
+        margin: 0px;
+      }
+    }
     .parties {
       flex-basis: 34%;
       padding: 0px 40px 0px 40px;
