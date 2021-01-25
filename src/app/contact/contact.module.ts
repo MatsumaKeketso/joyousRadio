@@ -1,13 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { IonicModule } from '@ionic/angular';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { ContactPageRoutingModule } from './contact-routing.module';
+import { IonicModule } from "@ionic/angular";
 
-import { ContactPage } from './contact.page';
-import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { ContactPageRoutingModule } from "./contact-routing.module";
+
+import { ContactPage } from "./contact.page";
+import { EmailComposer } from "@ionic-native/email-composer/ngx";
+import { ComponentsModule } from "../components/components.module";
 
 @NgModule({
   imports: [
@@ -15,11 +18,11 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
     FormsModule,
     IonicModule,
     ContactPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentsModule,
+    HttpClientModule
   ],
-  declarations: [ContactPage],
-  providers: [
-    EmailComposer
-  ]
+  declarations: [ContactPage,],
+  providers: [EmailComposer],
 })
 export class ContactPageModule {}

@@ -1,0 +1,46 @@
+.footer {
+    width: 100%;
+    background: #171717;
+    display: flex;
+    
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 50px 20px 90px 20px;
+    position: relative;
+    .ll{
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      text-align: center;
+      padding: 20px;
+      p {
+        margin: 0px;
+      }
+    }
+    .JS {
+      color: white;
+      .fabs {
+        display: flex;
+        .s {
+          width: 20px;
+        }
+      }
+    }
+    .quickLinks {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+    }
+    .contactInfo {
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+  }
+  @media only screen and (max-width: 1347px) {
+    .footer {
+      flex-direction: column;
+    }
+  }

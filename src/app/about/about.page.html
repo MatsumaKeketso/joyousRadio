@@ -183,6 +183,7 @@
     <br />
     <div class="content">
       <div class="information">
+        <!-- Inside Studio -->
         <div class="img">
           <img src="../../assets/img/gallery/image002.jpg" alt="" />
         </div>
@@ -202,7 +203,8 @@
           of him JouousRadio airs Pastor Mahlangu's devotional messages everyday
           names "Start Your New Day".
         </p>
-        <div class="img">
+        <!-- Logo -->
+        <div class="imageee">
           <img src="../../assets/img/gallery/h.jpg" alt="" />
         </div>
         <p style="text-align: center">
@@ -239,110 +241,6 @@
     </div>
 
   </div>
-  <div class="bibleQuote">
-    <div class="innerContent">
-      <div class="innerImg">
-        <img src="../../assets/img/JR-light.png" alt="" />
-      </div>
-      <div class="quote">
-        <p class="title">2 Corinthians 9:7 (AMP)</p>
-        <p>
-          "Let each one give <i> [thoughtfully and with purpose]</i> just as he has
-          decided in his heart, not grudgingly or under compulsion, for God
-          loves a cheerful giver <i>[and delights in the one whose heart is in
-            his gift]</i>."
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="footer">
-    <!-- Image -->
-    <div class="JS">
-      <img style="width: 250px" src="../../assets/img/JR-light.png" alt="" />
-      <p style="width: 292px">
-        "Jesus Christ is the same yesterday, today and forever more."
-      </p>
-      <p style="font-size: 12px">Hebrews 13:8</p>
-      <div class="fabs">
-        <ion-fab-button
-          href="https://www.facebook.com/JoyousRadio/"
-          target="_blank"
-          color="dark"
-        >
-          <ion-icon color="primary" name="logo-facebook"></ion-icon>
-        </ion-fab-button>
-        <div class="s"></div>
-        <ion-fab-button
-          href="https://twitter.com/JoyousRadio"
-          target="_blank"
-          color="dark"
-        >
-          <ion-icon color="primary" name="logo-twitter"></ion-icon>
-        </ion-fab-button>
-      </div>
-    </div>
-    <!-- Quick Links -->
-    <div class="quickLinks">
-      <h2>Quick Links</h2>
-      <ion-item lines="none" (click)="onClick('home')">
-        <ion-icon name="chevron-forward" color="light"></ion-icon>
-        <ion-label> Home </ion-label>
-      </ion-item>
-      <ion-item lines="none" (click)="onClick('about')">
-        <ion-icon name="chevron-forward" color="light"></ion-icon>
-        <ion-label> About </ion-label>
-      </ion-item>
-      <ion-item lines="none" (click)="onClick('donate')">
-        <ion-icon name="chevron-forward" color="light"></ion-icon>
-        <ion-label> Donate </ion-label>
-      </ion-item>
-      <ion-item lines="none" (click)="onClick('church')">
-        <ion-icon name="chevron-forward" color="light"></ion-icon>
-        <ion-label> Church </ion-label>
-      </ion-item>
-      <ion-item lines="none" (click)="onClick('gallery')">
-        <ion-icon name="chevron-forward" color="light"></ion-icon>
-        <ion-label> Gallery </ion-label>
-      </ion-item>
-      <ion-item lines="none" (click)="onClick('contact')">
-        <ion-icon name="chevron-forward" color="light"></ion-icon>
-        <ion-label> Contact Us </ion-label>
-      </ion-item>
-      <ion-item lines="none" (click)="onClick('listen')">
-        <ion-icon name="chevron-forward" color="light"></ion-icon>
-        <ion-label> Listen Live </ion-label>
-      </ion-item>
-    </div>
-    <!-- Contact Info -->
-    <div class="contactInfo">
-      <h2>Contact Info</h2>
-      <ion-item lines="none">
-        <ion-icon
-          name="call"
-          lines="none"
-          color="light"
-          slot="start"
-        ></ion-icon>
-        <ion-label> 087 943 8100 </ion-label>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-icon
-          name="call"
-          lines="none"
-          color="light"
-          slot="start"
-        ></ion-icon>
-        <ion-label> 086 502 3213 </ion-label>
-      </ion-item>
-      <ion-item lines="none">
-        <ion-icon
-          name="send"
-          lines="none"
-          color="light"
-          slot="start"
-        ></ion-icon>
-        <ion-label> admin@joyousradio.co.za </ion-label>
-      </ion-item>
-    </div>
-  </div>
+  <app-block-quote></app-block-quote>
+  <app-footer></app-footer>
 </ion-content>

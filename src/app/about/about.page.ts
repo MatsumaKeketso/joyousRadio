@@ -11,6 +11,9 @@ export class AboutPage implements OnInit {
   constructor(private navCtrl: NavController, private zone: NgZone) { }
   ngOnInit() {
   }
+  ionViewWillLeave(){
+    this.menuActive = false;
+   }
   // Navigation
   light = false;
   menuActive = false;

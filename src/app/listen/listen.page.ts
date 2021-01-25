@@ -39,6 +39,9 @@ export class ListenPage implements OnInit {
       
     })
   }
+  ionViewWillLeave(){
+    this.menuActive = false;
+   }
   // Navigation
   light = false;
   menuActive = false;

@@ -1,8 +1,10 @@
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Component, OnInit, NgZone } from "@angular/core";
 import { NavController } from "@ionic/angular";
-import { FormBuilder, Validators, FormGroup } from "@angular/forms";
+import { FormBuilder, Validators, FormGroup, NgForm } from "@angular/forms";
 import { ToastController } from "@ionic/angular";
-import { EmailComposer } from '@ionic-native/email-composer/ngx';
+import { EmailComposer } from "@ionic-native/email-composer/ngx";
+import nodemailer from "nodemailer";
 @Component({
   selector: "app-contact",
   templateUrl: "./contact.page.html",
@@ -10,17 +12,17 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
 })
 export class ContactPage implements OnInit {
   messageForm: FormGroup;
-
+  loading = false;
   constructor(
     public formBuilder: FormBuilder,
     private navCtrl: NavController,
     private zone: NgZone,
     public toastCtrl: ToastController,
-    private emailComposer: EmailComposer
+    private emailComposer: EmailComposer,
+    private http: HttpClient
   ) {}
 
   ngOnInit() {
- 
     this.messageForm = this.formBuilder.group({
       fullName: ["", Validators.compose([Validators.required])],
       email: [
@@ -33,6 +35,9 @@ export class ContactPage implements OnInit {
       subject: ["", Validators.compose([Validators.required])],
       message: ["", Validators.compose([Validators.required])],
     });
+  }
+  ionViewWillLeave() {
+    this.menuActive = false;
   }
   // Navigation
   light = false;
@@ -60,15 +65,41 @@ export class ContactPage implements OnInit {
   }
   // End NAvigation
 
-  sendMessage(data) {
-    let email = {
-      to: 'keketsomatsuma88@gmail.com',
-      subject: 'Cordova Icons',
-      body: 'How are you? Nice greetings from Leipzig',
-      isHtml: true
-    }
-  
-    // Send a text message using default options
-    this.emailComposer.open(email);
+  sendMessage(form) {
+    this.zone.run(() => {
+      this.loading = true
+        const email = form;
+        const headers = new HttpHeaders({ "Content-Type": "application/json" });
+        this.http
+          .post(
+            "https://formspree.io/f/mpzoozvj",
+            {
+              name: email.fullName,
+              replyto: email.email,
+              subject: email.subject,
+              message: email.message
+            },
+            { headers: headers }
+          )
+          .subscribe(async (response: any) => {
+            if (response.ok == true) {
+              this.messageForm.reset();
+              const toaster = await this.toastCtrl.create({
+                message: "Thank you for you message.",
+                duration: 3000,
+              });
+              await toaster.present();
+              this.loading = false;
+            } else {
+              const toaster = await this.toastCtrl.create({
+                message: "Please try again.",
+                duration: 3000,
+              });
+              await toaster.present();
+              this.loading = false;
+            }
+          });
+    });
   }
+  // async..await is not allowed in global scope, must use a wrapper
 }

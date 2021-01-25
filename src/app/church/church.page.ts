@@ -11,6 +11,9 @@ export class ChurchPage implements OnInit {
 
   ngOnInit() {
   }
+  ionViewWillLeave(){
+    this.menuActive = false;
+   }
   // Navigation
   light = false;
   menuActive = false;

@@ -25,8 +25,7 @@ export class AppComponent {
   initializeApp() {
     console.clear()
     this.platform.ready().then(async () => {
-      this.http.get("../assets/credentials.json").subscribe((data: any) => {
-      });
+
     });
   }
   sendTestEmail () {
