@@ -172,114 +172,125 @@
     </div>
   </div>
   <div class="body">
-    <div class="contactInfo">
-      <div class="item">
-        <div class="icon">
-          <ion-icon color="primary" name="call"></ion-icon>
-        </div>
-        <div class="info">
-          <ion-text color="dark">
-            <p class="title">Contact Number</p>
-          </ion-text>
-          <ion-text color="dark">
-            <p>087 943 8100</p>
-          </ion-text>
-        </div>
-      </div>
-      <div class="item">
-        <div class="icon">
-          <ion-icon color="primary" name="call"></ion-icon>
-        </div>
-        <div class="info">
-          <ion-text color="dark">
-            <p class="title">Fax</p>
-            <p>086 502 3213</p>
-          </ion-text>
-        </div>
-      </div>
-      <div class="item">
-        <div class="icon">
-          <ion-icon color="primary" name="send"></ion-icon>
-        </div>
-        <div class="info">
-          <ion-text color="dark">
-            <p class="title">Email Address</p>
-            <p>admin@joyousradio.co.za</p>
-          </ion-text>
-        </div>
-      </div>
-      <div class="item">
-        <div class="icon">
-          <ion-icon color="primary" name="globe-outline"></ion-icon>
-        </div>
-        <div class="info">
-          <ion-text color="dark">
-            <p class="title">Website</p>
-            <p>www.joyousradio.co.za</p>
-          </ion-text>
-        </div>
-      </div>
+    <div class="subHeader">
+      <div class="line"></div>
+      <p>contact us
+
+      </p>
+      <div class="line"></div>
     </div>
-    <div class="form">
-      <!-- action="https://formspree.io/f/mpzoozvj" method="POST" -->
-      <!--  -->
-      <form
-        [formGroup]="messageForm"
-        (ngSubmit)="sendMessage(messageForm.value)"
-      >
-        <ion-item>
-          <ion-label color="dark" position="floating">Full Name</ion-label>
-          <ion-input
-            formControlName="fullName"
-            name="name"
-            color="dark"
-            type="text"
-          ></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label color="dark" position="floating">Email</ion-label>
-          <ion-input
-            formControlName="email"
-            name="_replyto"
-            color="dark"
-            type="email"
-          ></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label color="dark" position="floating">Subject</ion-label>
-          <ion-input
-            formControlName="subject"
-            color="dark"
-            type="text"
-          ></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label color="dark" position="floating">Message</ion-label>
-          <ion-textarea
-            formControlName="message"
-            rows="14"
-            color="dark"
-            type="text"
-          ></ion-textarea>
-        </ion-item>
-        <ion-button
-          *ngIf="!loading"
-          type="submit"
-          [disabled]="!messageForm.valid"
-          mode="ios"
-          expand="block"
-          shape="round"
+    <h2><span>Joyous</span> Radio</h2>
+    <div class="cont">
+      <div class="contactInfo">
+        <div class="item">
+          <div class="icon">
+            <ion-icon color="primary" name="call"></ion-icon>
+          </div>
+          <div class="info">
+            <ion-text color="dark">
+              <p class="title">Contact Number</p>
+            </ion-text>
+            <ion-text color="dark">
+              <p>087 943 8100</p>
+            </ion-text>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon">
+            <ion-icon color="primary" name="call"></ion-icon>
+          </div>
+          <div class="info">
+            <ion-text color="dark">
+              <p class="title">Fax</p>
+              <p>086 502 3213</p>
+            </ion-text>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon">
+            <ion-icon color="primary" name="send"></ion-icon>
+          </div>
+          <div class="info">
+            <ion-text color="dark">
+              <p class="title">Email Address</p>
+              <p>admin@joyousradio.co.za</p>
+            </ion-text>
+          </div>
+        </div>
+        <div class="item">
+          <div class="icon">
+            <ion-icon color="primary" name="globe-outline"></ion-icon>
+          </div>
+          <div class="info">
+            <ion-text color="dark">
+              <p class="title">Website</p>
+              <p>www.joyousradio.co.za</p>
+            </ion-text>
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <!-- action="https://formspree.io/f/mpzoozvj" method="POST" -->
+        <!--  -->
+        <form
+          [formGroup]="messageForm"
+          (ngSubmit)="sendMessage(messageForm.value)"
         >
-          Send Message
-        </ion-button>
-        <ion-button *ngIf="loading" disabled="true" mode="ios" expand="block" shape="round">
-          <ion-spinner name="bubbles"></ion-spinner>
-        </ion-button>
-      </form>
+          <ion-item>
+            <ion-label color="dark" position="floating">Full Name</ion-label>
+            <ion-input
+              formControlName="fullName"
+              name="name"
+              color="dark"
+              type="text"
+            ></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label color="dark" position="floating">Email</ion-label>
+            <ion-input
+              formControlName="email"
+              name="_replyto"
+              color="dark"
+              type="email"
+            ></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label color="dark" position="floating">Subject</ion-label>
+            <ion-input
+              formControlName="subject"
+              color="dark"
+              type="text"
+            ></ion-input>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label color="dark" position="floating">Message</ion-label>
+            <ion-textarea
+              formControlName="message"
+              rows="14"
+              color="dark"
+              type="text"
+            ></ion-textarea>
+          </ion-item>
+          <ion-button
+            *ngIf="!loading"
+            type="submit"
+            [disabled]="!messageForm.valid"
+            mode="ios"
+            expand="block"
+            shape="round"
+          >
+            Send Message
+          </ion-button>
+          <ion-button *ngIf="loading" disabled="true" mode="ios" expand="block" shape="round">
+            <ion-spinner name="bubbles"></ion-spinner>
+          </ion-button>
+        </form>
+      </div>
     </div>
+
   </div>
   <app-block-quote></app-block-quote>
   <app-footer></app-footer>
