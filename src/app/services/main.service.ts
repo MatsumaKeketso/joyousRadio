@@ -23,6 +23,5 @@ export class MainService {
       resolve(this.playing);
     }
     })
-
   }
 }

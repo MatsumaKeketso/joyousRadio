@@ -52,7 +52,6 @@ export class ListenPage implements OnInit {
     } else {
       this.light = false;
     }
-    
   }
   onClick(page) {
     this.zone.run(() => {
